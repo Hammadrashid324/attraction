@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ececec; /* Softer background color */
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    background-image: url('amusement.webp'); /* Replace with the appropriate image URL */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    color: white; /* White text for better contrast */
+    text-align: center;
+    position: relative;
+}
+
+.header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+}
+
+nav {
+    background-color: #444; /* Darker background color for the navbar */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white; /* White text for better contrast */
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ff9900; /* Orange color on hover */
+}
+
+.attractions {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.attraction {
+    display: flex;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Initially translated */
+    animation: fadeInUp 1s ease-out forwards; /* Fade-in and slide-up animation */
+    animation-delay: 0.5s; /* Delay to make the effect smooth */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Restore position */
+    }
+}
+
+.attraction img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.attraction img:hover {
+    opacity: 0.9; /* Slight dimming effect on image hover */
+}
+
+.attraction-content {
+    padding: 20px;
+}
+
+.attraction-content h3 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.attraction-content p {
+    font-size: 16px;
+    color: #666;
+    transition: color 0.3s ease-in-out;
+}
+
+.attraction-content h3:hover {
+    color: #ff9900; /* Change title color on hover */
+}
+
+.attraction-content p:hover {
+    color: #444; /* Darker text color on hover */
+}
